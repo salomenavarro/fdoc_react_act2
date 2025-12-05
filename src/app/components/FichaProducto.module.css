@@ -1,3 +1,4 @@
+/* Módulos CSS: Encapsulamiento de estilos para evitar conflictos */
 .tarjeta {
   display: flex;
   align-items: center;
