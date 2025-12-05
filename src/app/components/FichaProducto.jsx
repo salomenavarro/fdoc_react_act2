@@ -4,17 +4,20 @@
 import React from 'react'
 import styles from './FichaProducto.module.css'
 
+
 export default function FichaProducto({ producto, precio, imagen }) {
   return (
 
     <div className={styles.tarjeta}>
-      {/* CORRECCIÓN 3: Añadir un atributo alt descriptivo para accesibilidad. */}
+      {/* Se utiliza el alt descriptivo para accesibilidad. */}
       <img src={imagen} alt={`Imagen del producto: ${producto}`} className={styles.imagen} />
 
       <div className={styles.contenido}>
-        <h1 className={styles.nombre}>{producto} </h1>
+        {/* CORRECCIÓN: Se utiliza <h3> para el nombre del producto para mantener una jerarquía semántica adecuada. */}
+        <h3 className={styles.nombre}>{producto} </h3>
         <div className={styles.precioBoton}>
-          <h2 className={styles.precio}>${precio}</h2>
+          {/* CORRECCIÓN: Se utiliza <h4> para el precio para mantener una jerarquía semántica adecuada. */}
+          <h4 className={styles.precio}>${precio}</h4>
           <button className={styles.boton}>Agregar</button>
         </div>
       </div>
